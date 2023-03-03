@@ -7,54 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.Cork360.AppBarOverlay">
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="411dp"
         android:layout_height="86dp"
         android:background="#7C2A2A"
         android:textColorHint="#000000"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="236dp"
         android:layout_height="56dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="476dp"
         android:layout_height="758dp"
-        app:srcCompat="@drawable/weibergehintergrund"
-        tools:layout_editor_absoluteX="-21dp"
-        tools:layout_editor_absoluteY="63dp" />
+        android:layout_marginTop="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/weibergehintergrund" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="320dp"
-        android:layout_height="121dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:text="Entdecken Sie mit Kork360 die perfekte Kombination aus Wein und Essen! Wählen Sie einfach Ihre Weinsorte und wir zeigen Ihnen passende Rezepte. Probieren Sie es noch heute aus!"
         android:textAlignment="center"
         android:textColor="#7C2A2A"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="110dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="460dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="319dp"/>
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/search_background"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:hint="Suchen sie ihren Wein"
+        android:paddingStart="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
